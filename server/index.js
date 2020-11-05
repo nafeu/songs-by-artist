@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import morgan from 'morgan';
+import 'dotenv/config';
 
 import api from './api/v1';
 
