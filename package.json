@@ -1,0 +1,37 @@
+{
+  "name": "songs-by-artist",
+  "version": "0.0.1",
+  "description": "Webapp that displays all songs for a given artist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node ./server",
+    "build": "./node_modules/.bin/babel -d ./dist ./server",
+    "prebuild": "rm -rf dist/*",
+    "start": "NODE_ENV=production node ./dist/index.js",
+    "prestart": "npm run build && cd client && npm run build && cd .. && mkdir dist/client dist/client/build && cp -rf client/build dist/client",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "keywords": [
+    "genius",
+    "react",
+    "node"
+  ],
+  "author": "Nafeu Nasir <nafeu.nasir@gmail.com> (http://nafeu.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "lodash": "4.17.20",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/node": "7.12.6",
+    "@babel/preset-env": "7.12.1",
+    "nodemon": "2.0.6"
+  },
+  "engines": {
+    "node": "14.8.0"
+  }
+}
