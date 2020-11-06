@@ -1,10 +1,10 @@
 import express from 'express';
 import { getSongs } from "./songs";
-import { getArtistId } from "./artists";
+import { getArtist } from "./artists";
 
 const api = express.Router();
 
 api.get("/songs/:artistId", getSongs);
-api.get("/artists", getArtistId);
+api.get("/artists", getArtist);
 
 export default api;

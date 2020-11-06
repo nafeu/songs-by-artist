@@ -10,8 +10,11 @@ export const buildGeniusSongsByArtistIdRequest = ({ artistId, page }) => {
 export const getSongsList = ({ songsResults }) => {
   const { songs, next_page: nextPage } = songsResults.response;
 
-  const songsList = songs.map(({ title }) => {
-    return title;
+  const songsList = songs.map(({ title, id }) => {
+    return {
+      title,
+      id
+    };
   });
 
   return {

@@ -8,6 +8,10 @@ export const buildGeniusSearchRequest = ({ search }) => {
   return `${GENIUS_API_URL}/search?q=${encodeURI(search)}`;
 };
 
+export const buildGeniusArtistRequest = ({ artistId }) => {
+  return `${GENIUS_API_URL}/artists/${artistId}}`;
+};
+
 export const extractArtistId = ({ searchResults }) => {
   const { hits } = searchResults.response;
 
@@ -29,7 +33,7 @@ export const extractArtistId = ({ searchResults }) => {
   return topMatchedArtistId;
 };
 
-export const getArtistId = async (req, res, next) => {
+export const getArtist = async (req, res, next) => {
   try {
     const { search } = req.query;
 
@@ -44,7 +48,18 @@ export const getArtistId = async (req, res, next) => {
 
     const artistId = extractArtistId({ searchResults });
 
-    res.json({ artistId });
+    const { data: artistResults } = await axios.get(
+      buildGeniusArtistRequest({ artistId }),
+      getAxiosConfig()
+    );
+
+    const { name, image_url: imageUrl } = artistResults.response.artist;
+
+    res.json({
+      artistId,
+      name,
+      imageUrl
+    });
   } catch (error) {
     next(error);
   }
