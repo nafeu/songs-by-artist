@@ -2,7 +2,9 @@
 
 A small webapp that displays all songs for a given artist.
 
-Live preview is available [here](http://songs-by-artist-demo.herokuapp.com).
+![Songs By Artist](https://raw.githubusercontent.com/nafeu/songs-by-artist/main/preview.gif)
+
+Live preview is available [here](http://songs-by-artist.herokuapp.com).
 
 ## Requirements
 
@@ -11,7 +13,6 @@ Live preview is available [here](http://songs-by-artist-demo.herokuapp.com).
 
 *Operational*
 - Genius API Access Token (Requires registered application with Genius API)
-
 
 ## Development
 
