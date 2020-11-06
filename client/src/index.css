@@ -1,0 +1,102 @@
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  background-color: #130f40;
+  color: #130f40;
+  margin: 2rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+input::placeholder {
+  color: #30336b;
+}
+
+*:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6e58d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #130f40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #30336b;
+}
+
+.app-container {
+  padding: 1.5rem 2rem 2rem 2rem;
+  width: 50%;
+  background-color: #f9ca24;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.search {
+  background-color: #130f40;
+  border: none;
+  padding: 0.5rem;
+  color: #f9ca24;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: 300ms ease-in-out background-color;
+  border-radius: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.loading-spinner {
+  position: absolute;
+  color: #30336b;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.matched-artist {
+  font-weight: 800;
+}
+
+.artist {
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px;
+}
+
+#scrollable-songs-list {
+  height: 50vh;
+  overflow: auto;
+  border: 2px solid #130f40;
+  padding: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .home-container {
+    width: 100%;
+  }
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+}
