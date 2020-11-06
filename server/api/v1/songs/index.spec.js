@@ -13,7 +13,7 @@ describe("buildGeniusSongsByArtistIdRequest", () => {
         apiUrl: exampleGeniusApiUrl,
         artistId: exampleArtistId,
       })
-    ).toEqual("api.genius.com/artists/1234/songs");
+    ).toEqual("api.genius.com/artists/1234/songs?per_page=40");
   });
 
   test("should include page in url when given as param", () => {
@@ -27,7 +27,7 @@ describe("buildGeniusSongsByArtistIdRequest", () => {
         artistId: exampleArtistId,
         page: examplePage,
       })
-    ).toEqual("api.genius.com/artists/1234/songs?page=2");
+    ).toEqual("api.genius.com/artists/1234/songs?per_page=40&page=2");
   });
 });
 

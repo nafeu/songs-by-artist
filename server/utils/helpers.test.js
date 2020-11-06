@@ -1,4 +1,3 @@
-import { TestScheduler } from 'jest';
 import { getKeyOfMaxValueInObject } from './helpers';
 
 describe('getKeyOfMaxValueInObject', () => {

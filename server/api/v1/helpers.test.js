@@ -1,4 +1,3 @@
-import { TestScheduler } from "jest";
 import { getAxiosConfig } from "./helpers";
 
 describe("getAxiosConfig", () => {

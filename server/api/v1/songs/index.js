@@ -5,7 +5,7 @@ import { getAxiosConfig } from "../helpers";
 import regeneratorRuntime from "regenerator-runtime";
 
 export const buildGeniusSongsByArtistIdRequest = ({ apiUrl = GENIUS_API_URL, artistId, page }) => {
-  return `${apiUrl}/artists/${artistId}/songs${page ? `?page=${page}` : ""}`;
+  return `${apiUrl}/artists/${artistId}/songs?per_page=40${page ? `&page=${page}` : ""}`;
 };
 
 export const getSongsList = ({ songsResults }) => {
