@@ -1,18 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import { MainContext } from '../../context/main';
+import React from 'react';
 
 function Home() {
-  const { state, dispatch } = useContext(MainContext);
-
-  const { count } = state;
-
-  const handleClick = () => {
-    dispatch({ type: 'UPDATE_COUNT' });
-  }
-
   return (
     <div>
-      <button onClick={handleClick}>Count: {count}</button>
+      Hello World.
     </div>
   );
 }

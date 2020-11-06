@@ -1,17 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './pages/home';
 import About from './pages/about';
-import { MainContext, MainContextProvider } from './context/main';
 import Navigation from './components/navigation';
-
-function AppContainer() {
-  return (
-    <MainContextProvider>
-      <App/>
-    </MainContextProvider>
-  );
-}
 
 function App() {
   return (
@@ -25,4 +16,4 @@ function App() {
   )
 }
 
-export default AppContainer;
+export default App;
