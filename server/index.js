@@ -3,6 +3,7 @@ import path from 'path';
 import morgan from 'morgan';
 import cors from 'cors';
 import 'dotenv/config';
+import regeneratorRuntime from "regenerator-runtime";
 
 import api from './api/v1';
 

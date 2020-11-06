@@ -2,7 +2,7 @@ import axios from "axios";
 import schema from "./schema";
 import { GENIUS_API_URL } from "../constants";
 import { getAxiosConfig } from "../helpers";
-import { getKeyOfMaxValueInObject } from "../../../../utils/helpers";
+import { getKeyOfMaxValueInObject } from "../../../utils/helpers";
 
 export const buildGeniusSearchRequest = ({ search }) => {
   return `${GENIUS_API_URL}/search?q=${encodeURI(search)}`;

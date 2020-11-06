@@ -30,11 +30,11 @@ function App() {
 
         if (search.length > 1) {
           const { data: artistData } = await axios.get(
-            `http://localhost:8000/api/artists?search=${encodeURI(search)}`
+            `/api/artists?search=${encodeURI(search)}`
           );
 
           const { data: songsData } = await axios.get(
-            `http://localhost:8000/api/songs/${artistData.artistId}`
+            `/api/songs/${artistData.artistId}`
           );
 
           if (!ignore) {
