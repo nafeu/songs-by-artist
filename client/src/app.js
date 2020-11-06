@@ -62,7 +62,7 @@ function App() {
       setLoading(true);
       setError(false);
       const { data: songsData } = await axios.get(
-        `http://localhost:8000/api/songs/${artistId}?page=${nextPage}`
+        `/api/songs/${artistId}?page=${nextPage}`
       );
 
       setSongsList([...songsList, ...songsData.songsList]);
