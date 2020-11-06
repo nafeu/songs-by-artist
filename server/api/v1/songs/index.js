@@ -2,9 +2,10 @@ import axios from "axios";
 import schema from "./schema";
 import { GENIUS_API_URL } from "../constants";
 import { getAxiosConfig } from "../helpers";
+import regeneratorRuntime from "regenerator-runtime";
 
-export const buildGeniusSongsByArtistIdRequest = ({ artistId, page }) => {
-  return `${GENIUS_API_URL}/artists/${artistId}/songs${page ? `?page=${page}` : ''}`;
+export const buildGeniusSongsByArtistIdRequest = ({ apiUrl = GENIUS_API_URL, artistId, page }) => {
+  return `${apiUrl}/artists/${artistId}/songs${page ? `?page=${page}` : ""}`;
 };
 
 export const getSongsList = ({ songsResults }) => {
@@ -19,7 +20,7 @@ export const getSongsList = ({ songsResults }) => {
 
   return {
     songsList,
-    nextPage,
+    nextPage: nextPage ? nextPage : null,
   };
 };
 

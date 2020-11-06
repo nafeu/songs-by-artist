@@ -1,9 +1,9 @@
 import { GENIUS_CLIENT_ACCESS_TOKEN } from "./constants";
 
-export const getAxiosConfig = () => {
+export const getAxiosConfig = ({ accessToken = GENIUS_CLIENT_ACCESS_TOKEN }) => {
   return {
     headers: {
-      Authorization: `Bearer ${GENIUS_CLIENT_ACCESS_TOKEN}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   };
 };

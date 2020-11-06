@@ -3,13 +3,14 @@ import schema from "./schema";
 import { GENIUS_API_URL } from "../constants";
 import { getAxiosConfig } from "../helpers";
 import { getKeyOfMaxValueInObject } from "../../../utils/helpers";
+import regeneratorRuntime from "regenerator-runtime";
 
-export const buildGeniusSearchRequest = ({ search }) => {
-  return `${GENIUS_API_URL}/search?q=${encodeURI(search)}`;
+export const buildGeniusSearchRequest = ({ apiUrl = GENIUS_API_URL, search }) => {
+  return `${apiUrl}/search?q=${encodeURI(search)}`;
 };
 
-export const buildGeniusArtistRequest = ({ artistId }) => {
-  return `${GENIUS_API_URL}/artists/${artistId}}`;
+export const buildGeniusArtistRequest = ({ apiUrl = GENIUS_API_URL, artistId }) => {
+  return `${apiUrl}/artists/${artistId}`;
 };
 
 export const extractArtistId = ({ searchResults }) => {

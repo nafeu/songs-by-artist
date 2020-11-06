@@ -4,7 +4,7 @@
   "description": "Webapp that displays all songs for a given artist.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/jest",
     "dev": "./node_modules/.bin/nodemon --ignore 'client/' --exec ./node_modules/.bin/babel-node ./server",
     "build": "./node_modules/.bin/babel -d ./dist ./server && cd client && npm run build && cd .. && mkdir dist/client dist/client/build && cp -rf client/build dist/client",
     "prebuild": "rm -rf dist/* client/build/*",
@@ -34,6 +34,8 @@
     "@babel/core": "7.12.3",
     "@babel/node": "7.12.6",
     "@babel/preset-env": "7.12.1",
+    "babel-jest": "26.6.3",
+    "jest": "26.6.3",
     "nodemon": "2.0.6"
   },
   "engines": {

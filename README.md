@@ -26,6 +26,9 @@ Live preview is available [here](http://songs-by-artist.herokuapp.com).
 git clone https://github.com/nafeu/songs-by-artist.git
 cd songs-by-artist
 npm install
+cd client
+npm install
+cd ..
 cp .example-env .env
 ```
 
@@ -47,6 +50,12 @@ npm start
 ```
 
 View development app at `http://localhost:3000`
+
+### Testing
+
+```
+npm run test
+```
 
 ## Deployment
 

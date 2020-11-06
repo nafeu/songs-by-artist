@@ -1,5 +1,6 @@
 export const getKeyOfMaxValueInObject = inputObject => {
-  return Object.keys(inputObject).reduce((a, b) =>
-    inputObject[a] > inputObject[b] ? a : b
-  );
+  const keys = Object.keys(inputObject);
+  return keys.reduce((a, b) => {
+    return inputObject[a] > inputObject[b] ? a : b;
+  }, null);
 };
