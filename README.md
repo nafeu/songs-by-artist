@@ -59,11 +59,20 @@ npm run test
 
 ## Deployment
 
-_* This application is configured to run on heroku_
+### Cloud (Heroku)
+
+_* Make sure you have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed, have created a heroku app and are logged in to the cli._
 
 ```
 heroku config:set GENIUS_CLIENT_ACCESS_TOKEN=[enter your access token]
-git push heroku main
+npm run deploy
+```
+
+### Manual Production Build
+
+```
+npm run build
+npm start
 ```
 
 ## License
